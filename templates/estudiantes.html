@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estudiantes | Sistema</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <div class="burbujas">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <header class="header">
+
+        <div class="logo">
+            🎓 <span>Sistema de Estudiantes</span>
+        </div>
+
+        <nav>
+            <a href="/">🏠 Inicio</a>
+            <a class="activo" href="/estudiantes">👩‍🎓 Estudiantes</a>
+            <a href="/contacto">💌 Contacto</a>
+        </nav>
+
+    </header>
+
+    <main class="pagina">
+
+        <section class="titulo-pagina">
+
+            <p class="etiqueta">📚 Nuestros estudiantes</p>
+
+            <h1>Lista de estudiantes 👩‍🎓</h1>
+
+            <p>
+                Aquí puedes encontrar algunos datos de nuestros estudiantes.
+            </p>
+
+        </section>
+
+        <section class="tabla-card">
+
+            <div class="tabla-titulo">
+                <h2>🌟 Estudiantes registrados</h2>
+
+                <span class="contador">
+                    3 estudiantes
+                </span>
+            </div>
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>👤 Nombre</th>
+                            <th>🎂 Edad</th>
+                            <th>💻 Carrera</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Juan Pérez</td>
+                            <td>20 años</td>
+                            <td><span class="carrera">Sistemas</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>María López</td>
+                            <td>21 años</td>
+                            <td><span class="carrera">Informática</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Carlos Mamani</td>
+                            <td>22 años</td>
+                            <td><span class="carrera">Sistemas</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="frase">
+
+            <div class="frase-icono">🌟</div>
+
+            <div>
+                <h2>¡Nunca dejes de aprender!</h2>
+
+                <p>
+                    Cada nuevo conocimiento es un paso más cerca de tus metas.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🎓 Sistema de Estudiantes</p>
+        <p>Hecho con ❤️ usando Flask</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

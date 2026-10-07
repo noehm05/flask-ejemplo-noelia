@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Sistema de Estudiantes</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <div class="burbujas">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            🎓 <span>Sistema de Estudiantes</span>
+        </div>
+
+        <nav>
+            <a class="activo" href="/">🏠 Inicio</a>
+            <a href="/estudiantes">👩‍🎓 Estudiantes</a>
+            <a href="/contacto">💌 Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-texto">
+                <p class="etiqueta">✨ ¡Bienvenido!</p>
+
+                <h1>
+                    Aprende, crece y
+                    <span>cumple tus metas</span> 🎯
+                </h1>
+
+                <p>
+                    Este pequeño sistema permite conocer y gestionar
+                    información de nuestros estudiantes de una manera
+                    sencilla y amigable.
+                </p>
+
+                <div class="botones">
+                    <a href="/estudiantes" class="boton principal">
+                        Ver estudiantes 👀
+                    </a>
+
+                    <a href="/contacto" class="boton secundario">
+                        Contactarnos 💌
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="emoji-grande">🎓</div>
+                <h2>¡Tú puedes!</h2>
+                <p>Cada día es una nueva oportunidad para aprender.</p>
+                <div class="estrellitas">✨ ⭐ ✨</div>
+            </div>
+        </section>
+
+        <section class="tarjetas">
+
+            <div class="mini-card">
+                <div class="icono">📚</div>
+                <h3>Aprendizaje</h3>
+                <p>El conocimiento nos ayuda a crecer cada día.</p>
+            </div>
+
+            <div class="mini-card">
+                <div class="icono">🚀</div>
+                <h3>Metas</h3>
+                <p>Con esfuerzo podemos alcanzar nuestros objetivos.</p>
+            </div>
+
+            <div class="mini-card">
+                <div class="icono">💡</div>
+                <h3>Ideas</h3>
+                <p>Las buenas ideas pueden convertirse en grandes proyectos.</p>
+            </div>
+
+        </section>
+
+        <section class="mensaje-inicio">
+            <h2>💖 Un pequeño mensaje</h2>
+
+            <p id="mensajeInicio">
+                Presiona el botón para recibir una pequeña motivación.
+            </p>
+
+            <button onclick="mostrarMensaje()" class="boton principal">
+                ✨ Dame motivación
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🎓 Sistema de Estudiantes</p>
+        <p>Hecho con ❤️ usando Flask</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+

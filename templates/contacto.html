@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Sistema</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <div class="burbujas">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <header class="header">
+
+        <div class="logo">
+            🎓 <span>Sistema de Estudiantes</span>
+        </div>
+
+        <nav>
+            <a href="/">🏠 Inicio</a>
+            <a href="/estudiantes">👩‍🎓 Estudiantes</a>
+            <a class="activo" href="/contacto">💌 Contacto</a>
+        </nav>
+
+    </header>
+
+    <main class="pagina">
+
+        <section class="titulo-pagina">
+
+            <p class="etiqueta">💌 Estamos para ayudarte</p>
+
+            <h1>Contáctanos</h1>
+
+            <p>
+                ¿Tienes alguna pregunta? Déjanos un mensaje.
+            </p>
+
+        </section>
+
+        <section class="contacto-contenedor">
+
+            <div class="contacto-info">
+
+                <div class="contacto-emoji">
+                    💌
+                </div>
+
+                <h2>¡Nos gustaría saber de ti!</h2>
+
+                <p>
+                    Completa el formulario y envíanos tu mensaje.
+                    Te responderemos lo antes posible.
+                </p>
+
+                <div class="datos-contacto">
+                    <p>📧 contacto@estudiantes.com</p>
+                    <p>📱 +591 70000000</p>
+                    <p>📍 Bolivia</p>
+                </div>
+
+            </div>
+
+            <div class="formulario-card">
+
+                <form onsubmit="enviarFormulario(event)">
+
+                    <label for="nombre">👤 Nombre</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Escribe tu nombre"
+                        required
+                    >
+
+                    <label for="correo">📧 Correo</label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="Escribe tu correo"
+                        required
+                    >
+
+                    <label for="mensajeContacto">💬 Mensaje</label>
+
+                    <textarea
+                        id="mensajeContacto"
+                        placeholder="Escribe tu mensaje..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="boton principal">
+                        🚀 Enviar mensaje
+                    </button>
+
+                </form>
+
+                <p id="respuesta"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🎓 Sistema de Estudiantes</p>
+        <p>Hecho con ❤️ usando Flask</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+
